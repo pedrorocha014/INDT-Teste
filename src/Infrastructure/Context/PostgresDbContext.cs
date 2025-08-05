@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Core.PropostaAggregate;
+using Npgsql;
+using Npgsql.NameTranslation;
+using System.Globalization;
+using Core.PropostaAggregate.Enums;
+using Infrastructure.EfEntityConfig;
 
 namespace Infrastructure.Context;
 
@@ -9,6 +14,11 @@ public class PostgresDbContext : DbContext
 
     public DbSet<PropostaSeguro> PropostasSeguro { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Server=localhost;Port=5433;Database=indt_db;Username=postgres;Password=postgres");
+    public PostgresDbContext(DbContextOptions<PostgresDbContext> options)
+    : base(options)
+    {
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+        => builder.HasPostgresEnum<StatusProposta>();
 }

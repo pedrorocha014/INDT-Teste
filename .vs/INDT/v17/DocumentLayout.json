@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "D:\\Projects\\INDT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|d:\\projects\\indt\\src\\applications\\usecases\\propostas\\handlers\\createpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|solutionrelative:src\\applications\\usecases\\propostas\\handlers\\createpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\infraextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\infraextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\migrations\\postgresdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\migrations\\postgresdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\efentityconfig\\propostaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\efentityconfig\\propostaconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\INDT\\src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +50,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostgresDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "PostgresDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Migrations\\PostgresDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Migrations\\PostgresDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Migrations\\PostgresDbContextModelSnapshot.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Migrations\\PostgresDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T18:51:17.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T20:45:22.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Core",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
-              "RelativeDocumentMoniker": "src\\Core\\Core.csproj",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
-              "RelativeToolTip": "src\\Core\\Core.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-05T17:50:31.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InfraExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\InfraExtensions.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\InfraExtensions.cs",
               "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\InfraExtensions.cs",
               "RelativeToolTip": "src\\Infrastructure\\InfraExtensions.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAACUAAAASAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAACwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T17:38:20.701Z",
+              "WhenOpened": "2025-08-05T20:36:42.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PropostaConfig.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\EfEntityConfig\\PropostaConfig.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\EfEntityConfig\\PropostaConfig.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\EfEntityConfig\\PropostaConfig.cs",
+              "RelativeToolTip": "src\\Infrastructure\\EfEntityConfig\\PropostaConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:32:33.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PropostaController.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
+              "RelativeDocumentMoniker": "src\\PropostaService\\Controllers\\PropostaController.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
+              "RelativeToolTip": "src\\PropostaService\\Controllers\\PropostaController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAawCQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:19:42.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\PropostaService\\appsettings.Development.json",
+              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\appsettings.Development.json",
+              "RelativeToolTip": "src\\PropostaService\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T20:17:20.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\PropostaService\\appsettings.json",
+              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\appsettings.json",
+              "RelativeToolTip": "src\\PropostaService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-05T20:17:17.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PostgresDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:11:21.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreatePropostaCommandHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\CreatePropostaCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Applications\\UseCases\\Propostas\\Handlers\\CreatePropostaCommandHandler.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\CreatePropostaCommandHandler.cs",
+              "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Handlers\\CreatePropostaCommandHandler.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAawBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:04:34.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Core.csproj",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
-              "RelativeDocumentMoniker": "src\\Core\\Core.csproj",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
-              "RelativeToolTip": "src\\Core\\Core.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-05T17:03:37.19Z",
-              "EditorCaption": ""
+              "DocumentIndex": 9,
+              "Title": "20250805185711_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Migrations\\20250805185711_InitialCreate.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:55:16.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\Program.cs",
+              "RelativeDocumentMoniker": "src\\PropostaService\\Program.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\Program.cs",
+              "RelativeToolTip": "src\\PropostaService\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T19:55:41.413Z"
             }
           ]
         }

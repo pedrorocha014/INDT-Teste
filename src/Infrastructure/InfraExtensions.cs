@@ -6,6 +6,7 @@ using Npgsql;
 using Infrastructure.Context;
 using Npgsql.NameTranslation;
 using System.Globalization;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure;
 
@@ -20,30 +21,24 @@ public static class InfraExtensions
         return services;
     }
 
-       private static void AddDbContexts(this IServiceCollection services, IConfiguration config)
+    private static void AddDbContexts(this IServiceCollection services, IConfiguration config)
     {
         string? postgresConnectionString = config.GetConnectionString("PostgresConnection");
 
-        services.AddSingleton<NpgsqlDataSource>(_ =>
-        {
-            NpgsqlDataSourceBuilder dataSourceBuilder = new(postgresConnectionString);
-            AddEnum<StatusProposta>();
+        var dataSourceBuilder = new NpgsqlDataSourceBuilder(postgresConnectionString);
+        dataSourceBuilder.MapEnum<StatusProposta>();
+        var dataSource = dataSourceBuilder.Build();
 
-            return dataSourceBuilder.Build();
+        services.AddDbContext<PostgresDbContext>(options => options.UseNpgsql(dataSource));
+    }
 
-            void AddEnum<TEnum>(INpgsqlNameTranslator? nameTranslator = null) where TEnum : struct, Enum
-            {
-                dataSourceBuilder.MapEnum<TEnum>(
-                    pgName: NpgsqlSnakeCaseNameTranslator.ConvertToSnakeCase(typeof(TEnum).Name, CultureInfo.InvariantCulture),
-                    nameTranslator
-                );
-            }
-        });
+    public static PropertyBuilder<TProperty> HasEnumType<TProperty>(this PropertyBuilder<TProperty> builder, string? schema = PostgresDbContext.CurrentSchema)
+    {
+        Type enumType = typeof(TProperty);
+        Type? underlyingType = enumType.IsGenericType && enumType.GetGenericTypeDefinition() == typeof(Nullable<>)
+            ? Nullable.GetUnderlyingType(enumType)
+            : enumType;
 
-        services.AddDbContext<PostgresDbContext>((sp, options) =>
-            options.UseNpgsql(sp.GetRequiredService<NpgsqlDataSource>(),
-                builder => builder.MigrationsAssembly("Migrations")
-                    .MigrationsHistoryTable("__EFMigrationsHistory_" + PostgresDbContext.CurrentSchema,
-                        PostgresDbContext.CurrentSchema)));
+        return builder.HasColumnType(schema + '.' + NpgsqlSnakeCaseNameTranslator.ConvertToSnakeCase(underlyingType.Name,CultureInfo.InvariantCulture));
     }
 }

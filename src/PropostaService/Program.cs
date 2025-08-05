@@ -1,7 +1,18 @@
+using Applications.UseCases.Propostas.Commands;
+using Infrastructure;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
+var mediatRAssemblies = new[]
+{
+    Assembly.GetAssembly(typeof(CreatePropostaCommand))
+};
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
