@@ -15,12 +15,12 @@ public static class InfraExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddDbContext(configuration);
+        services.AddDbContexts(configuration);
 
         return services;
     }
 
-   private static void AddDbContext(this IServiceCollection services, IConfiguration config)
+       private static void AddDbContexts(this IServiceCollection services, IConfiguration config)
     {
         string? postgresConnectionString = config.GetConnectionString("PostgresConnection");
 

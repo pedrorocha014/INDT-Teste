@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Projects\\INDT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\context\\postgresdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|d:\\projects\\indt\\src\\infrastructure\\infraextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}|src\\Infrastructure\\Infrastructure.csproj|solutionrelative:src\\infrastructure\\infraextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|d:\\projects\\indt\\src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F0D54374-85C2-4F04-A2F8-D4DE5E52229E}|src\\Core\\Core.csproj|solutionrelative:src\\core\\core.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "PostgresDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Context\\PostgresDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T18:51:17.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Core",
               "DocumentMoniker": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
               "RelativeDocumentMoniker": "src\\Core\\Core.csproj",
@@ -43,19 +56,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Infrastructure",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Infrastructure.csproj",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Infrastructure\\Infrastructure.csproj",
-              "RelativeToolTip": "src\\Infrastructure\\Infrastructure.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-05T17:48:43.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "InfraExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\INDT\\src\\Infrastructure\\InfraExtensions.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\InfraExtensions.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Core.csproj",
               "DocumentMoniker": "D:\\Projects\\INDT\\src\\Core\\Core.csproj",
               "RelativeDocumentMoniker": "src\\Core\\Core.csproj",
