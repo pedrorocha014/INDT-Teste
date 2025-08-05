@@ -1,4 +1,4 @@
-namespace Core.PropostaAggregate;
+namespace Core.PropostaAggregate.Enums;
 
 public enum StatusProposta
 {

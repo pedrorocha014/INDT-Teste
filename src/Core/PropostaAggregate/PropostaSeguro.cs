@@ -1,3 +1,5 @@
+using Core.PropostaAggregate.Enums;
+
 namespace Core.PropostaAggregate;
 
 public class PropostaSeguro{
