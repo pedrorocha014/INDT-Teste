@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Applications.Dtos;
+using Infrastructure.Configs;
 
 namespace ContratacaoWorker.Services;
 
@@ -42,7 +43,7 @@ public class KafkaConsumerService : IKafkaConsumerService
     {
         try
         {
-            _consumer.Subscribe("proposta-contratada");
+            _consumer.Subscribe(TopicNames.PropostaContratada);
             _logger.LogInformation("Iniciando consumo do tópico proposta-contratada");
 
             while (!cancellationToken.IsCancellationRequested)
@@ -153,7 +154,7 @@ public class KafkaConsumerService : IKafkaConsumerService
             var dlqJson = JsonConvert.SerializeObject(dlqMessage);
             var key = Guid.NewGuid().ToString();
 
-            var result = await _dlqProducer.ProduceAsync("proposta-contratada.dlq", new Message<string, string>
+            var result = await _dlqProducer.ProduceAsync(TopicNames.PropostaContratadaDlq, new Message<string, string>
             {
                 Key = key,
                 Value = dlqJson
