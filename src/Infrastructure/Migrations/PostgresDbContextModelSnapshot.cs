@@ -23,6 +23,28 @@ namespace Infrastructure.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "status_proposta", new[] { "em_analise", "aprovada", "rejeitada" });
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Core.PropostaAggregate.Contratacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("PropostaId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PropostaId")
+                        .IsUnique();
+
+                    b.ToTable("Contratacao");
+                });
+
             modelBuilder.Entity("Core.PropostaAggregate.PropostaSeguro", b =>
                 {
                     b.Property<int>("Id")
@@ -51,6 +73,22 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PropostasSeguro");
+                });
+
+            modelBuilder.Entity("Core.PropostaAggregate.Contratacao", b =>
+                {
+                    b.HasOne("Core.PropostaAggregate.PropostaSeguro", "PropostaSeguro")
+                        .WithOne("Contratacao")
+                        .HasForeignKey("Core.PropostaAggregate.Contratacao", "PropostaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PropostaSeguro");
+                });
+
+            modelBuilder.Entity("Core.PropostaAggregate.PropostaSeguro", b =>
+                {
+                    b.Navigation("Contratacao");
                 });
 #pragma warning restore 612, 618
         }

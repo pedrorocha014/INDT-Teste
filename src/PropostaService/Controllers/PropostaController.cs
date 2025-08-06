@@ -77,6 +77,45 @@ public class PropostaController(IMediator mediator, ILogger<PropostaController> 
         }
     }
 
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        try
+        {
+            var query = new GetPropostaByIdQuery
+            {
+                Id = id
+            };
+
+            var proposta = await _mediator.Send(query);
+
+            if (proposta == null)
+            {
+                _logger.LogWarning("Proposta com ID {PropostaId} n√£o encontrada", id);
+                return NotFound();
+            }
+
+            var response = new PropostaResponse
+            {
+                Id = proposta.Id,
+                Name = proposta.Name,
+                Cpf = proposta.Cpf,
+                Status = proposta.Status,
+                CreatedAt = proposta.CreatedAt,
+                UpdatedAt = proposta.UpdatedAt
+            };
+
+            _logger.LogInformation("Proposta {PropostaId} encontrada", id);
+
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao buscar proposta {PropostaId}", id);
+            return StatusCode(500, "Erro interno do servidor");
+        }
+    }
+
     [HttpPatch("{propostaId}")]
     public async Task<IActionResult> Update(int propostaId, [FromBody] UpdatePropostaStatusRequest request)
     {
@@ -87,7 +126,7 @@ public class PropostaController(IMediator mediator, ILogger<PropostaController> 
                 PropostaId = propostaId,
                 Status = !string.IsNullOrWhiteSpace(request.Status) && Enum.TryParse<StatusProposta>(request.Status, true, out var status)
                     ? status
-                    : throw new BadHttpRequestException("Status inv·lido")
+                    : throw new BadHttpRequestException("Status inv√°lido")
             };
 
             var proposta = await _mediator.Send(command);
@@ -99,7 +138,7 @@ public class PropostaController(IMediator mediator, ILogger<PropostaController> 
         } 
         catch (BadHttpRequestException ex)
         {
-            _logger.LogError(ex, "Status inv·lido");
+            _logger.LogError(ex, "Status inv√°lido");
             return BadRequest(ex.Message);
         }
         catch (Exception ex)

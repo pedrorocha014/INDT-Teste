@@ -9,4 +9,6 @@ public class PropostaSeguro{
     public StatusProposta Status { get; set; }
     public DateTimeOffset CreatedAt { get; init; } = DateTimeOffset.UtcNow;
     public DateTimeOffset UpdatedAt { get; init; } = DateTimeOffset.UtcNow;
+
+    public Contratacao? Contratacao { get; set; }
 }
