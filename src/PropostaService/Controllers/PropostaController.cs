@@ -5,6 +5,7 @@ using Applications.UseCases.Propostas.Queries;
 using PropostaService.Dtos;
 using Core.PropostaAggregate.Enums;
 using System.Linq;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace PropostaService.Controllers;
 
@@ -68,6 +69,38 @@ public class PropostaController(IMediator mediator, ILogger<PropostaController> 
             _logger.LogInformation("Listadas {Count} propostas", response.Count());
 
             return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao listar propostas");
+            return StatusCode(500, "Erro interno do servidor");
+        }
+    }
+
+    [HttpPatch("{propostaId}")]
+    public async Task<IActionResult> Update(int propostaId, [FromBody] UpdatePropostaStatusRequest request)
+    {
+        try
+        {
+            var command = new UpdatePropostaCommand
+            {
+                PropostaId = propostaId,
+                Status = !string.IsNullOrWhiteSpace(request.Status) && Enum.TryParse<StatusProposta>(request.Status, true, out var status)
+                    ? status
+                    : throw new BadHttpRequestException("Status inválido")
+            };
+
+            var proposta = await _mediator.Send(command);
+
+            if (proposta == null)
+                return NotFound();
+
+            return NoContent();
+        } 
+        catch (BadHttpRequestException ex)
+        {
+            _logger.LogError(ex, "Status inválido");
+            return BadRequest(ex.Message);
         }
         catch (Exception ex)
         {

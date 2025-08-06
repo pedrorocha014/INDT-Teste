@@ -16,7 +16,8 @@ public static class ApplicationsExtensions
         var mediatRAssemblies = new[]
         {
             Assembly.GetAssembly(typeof(CreatePropostaCommand)),
-            Assembly.GetAssembly(typeof(ListPropostasQuery))
+            Assembly.GetAssembly(typeof(ListPropostasQuery)),
+            Assembly.GetAssembly(typeof(UpdatePropostaCommand))
         };
 
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies));

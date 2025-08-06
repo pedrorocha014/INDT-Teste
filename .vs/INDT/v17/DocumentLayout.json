@@ -90,8 +90,7 @@
               "RelativeToolTip": "src\\PropostaService\\Dtos\\PropostaResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T12:21:46.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T12:21:46.837Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Handlers\\ListPropostasQueryHandler.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T12:11:45.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T12:11:45.68Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Commands\\CreatePropostaCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T12:10:51.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T12:10:51.135Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,7 @@
               "RelativeToolTip": "src\\Applications\\ApplicationsExtensions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T12:10:15.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T12:10:15.14Z"
             },
             {
               "$type": "Document",
@@ -140,7 +136,7 @@
               "RelativeDocumentMoniker": "src\\PropostaService\\Controllers\\PropostaController.cs",
               "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
               "RelativeToolTip": "src\\PropostaService\\Controllers\\PropostaController.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADkAAAAMAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAqwFsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:19:42.72Z",
               "EditorCaption": ""
@@ -179,8 +175,7 @@
               "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Handlers\\CreatePropostaCommandHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T20:04:34.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T20:04:34.677Z"
             },
             {
               "$type": "Document",
