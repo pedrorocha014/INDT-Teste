@@ -1,0 +1,2 @@
+# Excluir appsettings.json do Infrastructure para evitar conflito
+Infrastructure/appsettings.json 
