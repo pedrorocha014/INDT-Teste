@@ -17,6 +17,7 @@ services:
       retries: 5
     networks:
       bubble:
+    profiles: ["essentials", "app"]
 
   zookeeper:
     image: docker.io/zookeeper:3.5
@@ -36,6 +37,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    profiles: ["essentials", "app"]
   
   kafka:
     image: docker.io/confluentinc/cp-server:7.3.3
@@ -66,6 +68,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+    profiles: ["essentials", "app"]
   
   criador-topicos:
     image: docker.io/confluentinc/cp-kafka:7.3.2
@@ -89,6 +92,7 @@ services:
         kafka-topics --bootstrap-server kafka:29092 --list
     networks:
       bubble:
+    profiles: ["essentials", "app"]
   
   akhq:
     container_name: akhq
@@ -107,6 +111,62 @@ services:
             docker-kafka-server:
               properties:
                 bootstrap.servers: "kafka:29092"
+    profiles: ["essentials", "app"]
+
+  proposta-service:
+    build:
+      context: ../src/PropostaService
+      dockerfile: Dockerfile
+    container_name: proposta-service
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=postgres;Port=5433;Database=indt_db;Username=postgres;Password=postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      bubble:
+    profiles: ["app"]
+
+  contratacao-service:
+    build:
+      context: ../src/ContratacaoService
+      dockerfile: Dockerfile
+    container_name: contratacao-service
+    ports:
+      - "5002:5000"
+      - "5003:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=postgres;Port=5433;Database=indt_db;Username=postgres;Password=postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    networks:
+      bubble:
+    profiles: ["app"]
+
+  contratacao-worker:
+    build:
+      context: ../src/ContratacaoWorker
+      dockerfile: Dockerfile
+    container_name: contratacao-worker
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=postgres;Port=5433;Database=indt_db;Username=postgres;Password=postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    networks:
+      bubble:
+    profiles: ["app"]
 
 networks:
   bubble:
