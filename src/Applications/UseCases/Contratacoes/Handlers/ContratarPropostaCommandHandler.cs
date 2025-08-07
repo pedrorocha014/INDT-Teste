@@ -7,10 +7,12 @@ using Newtonsoft.Json;
 using Applications.Services;
 using Applications.Dtos;
 using Applications.Configs;
+using Ardalis.Result;
+using Core.PropostaAggregate.Enums;
 
 namespace Applications.UseCases.Contratacoes.Handlers;
 
-public class ContratarPropostaCommandHandler : IRequestHandler<ContratarPropostaCommand>
+public class ContratarPropostaCommandHandler : IRequestHandler<ContratarPropostaCommand, Result>
 {
     private readonly ILogger<ContratarPropostaCommandHandler> _logger;
     private readonly HttpClient _httpClient;
@@ -29,15 +31,20 @@ public class ContratarPropostaCommandHandler : IRequestHandler<ContratarProposta
         _serviceConfig = serviceConfig;
     }
 
-    public async Task Handle(ContratarPropostaCommand request, CancellationToken cancellationToken)
+    public async Task<Result> Handle(ContratarPropostaCommand request, CancellationToken cancellationToken)
     {
-        var propostaExterna = await ConsultarPropostaExterna(request.PropostaId, cancellationToken);
-
-        if (propostaExterna != null)
+        try
         {
-            if (propostaExterna.Status != "Aprovada")
+            var propostaExterna = await ConsultarPropostaExterna(request.PropostaId, cancellationToken);
+
+            if (propostaExterna == null)
             {
-                throw new InvalidOperationException($"Proposta {request.PropostaId} não está aprovada. Status atual: {propostaExterna.Status}");
+                return Result.NotFound($"Proposta com ID {request.PropostaId} não encontrada na API externa");
+            }
+
+            if (propostaExterna.Status != nameof(StatusProposta.Aprovada))
+            {
+                return Result.Error($"Proposta {request.PropostaId} não está aprovada. Status atual: {propostaExterna.Status}");
             }
 
             var evento = new PropostaContratadaEvent
@@ -50,10 +57,13 @@ public class ContratarPropostaCommandHandler : IRequestHandler<ContratarProposta
 
             _logger.LogInformation("Proposta {PropostaId} contratada e evento enviado para o Kafka", request.PropostaId);
 
-            return;
+            return Result.Success();
         }
-
-        throw new InvalidOperationException($"Proposta com ID {request.PropostaId} não encontrada na API externa");
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao contratar proposta {PropostaId}", request.PropostaId);
+            return Result.Error($"Erro ao contratar proposta: {ex.Message}");
+        }
     }
 
     private async Task<PropostaExternaResponse?> ConsultarPropostaExterna(int propostaId, CancellationToken cancellationToken)

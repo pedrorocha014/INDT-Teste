@@ -3,6 +3,7 @@ using MediatR;
 using ContratacaoService.Dtos;
 using Applications.UseCases.Contratacoes.Commands;
 using Applications.UseCases.Contratacoes.Queries;
+using Ardalis.Result;
 namespace ContratacaoService.Controllers;
 
 [ApiController]
@@ -20,9 +21,15 @@ public class ContratacaoController(IMediator mediator, ILogger<ContratacaoContro
             _logger.LogInformation("Iniciando listagem de contratos");
 
             var query = new ListContratosQuery();
-            var contratos = await _mediator.Send(query);
+            var result = await _mediator.Send(query);
 
-            var response = contratos.Select(c => new ContratoResponse
+            if (!result.IsSuccess)
+            {
+                _logger.LogError("Erro ao listar contratos: {Error}", result.Errors.FirstOrDefault());
+                return StatusCode(500, new { error = result.Errors.FirstOrDefault() });
+            }
+
+            var response = result.Value.Select(c => new ContratoResponse
             {
                 Id = c.Id,
                 CreatedAt = c.CreatedAt,
@@ -61,7 +68,19 @@ public class ContratacaoController(IMediator mediator, ILogger<ContratacaoContro
                 PropostaId = request.PropostaId
             };
 
-            await _mediator.Send(command);
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSuccess)
+            {
+                _logger.LogError("Erro ao contratar proposta {PropostaId}: {Error}", request.PropostaId, result.Errors.FirstOrDefault());
+                
+                if (result.Status == ResultStatus.NotFound)
+                {
+                    return NotFound(new { error = result.Errors.FirstOrDefault() });
+                }
+                
+                return BadRequest(new { error = result.Errors.FirstOrDefault() });
+            }
 
             _logger.LogInformation("Proposta {PropostaId} contratada com sucesso", request.PropostaId);
 

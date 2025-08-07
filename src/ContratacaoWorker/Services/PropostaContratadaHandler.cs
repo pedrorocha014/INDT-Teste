@@ -24,7 +24,13 @@ public class PropostaContratadaHandler : IPropostaContratadaHandler
 
             var command = new CreateContratoCommand { PropostaId = evento.PropostaId, CreatedAt = evento.DataContratacao };
 
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(command, cancellationToken);
+            
+            if (!result.IsSuccess)
+            {
+                _logger.LogError("Falha ao criar contrato: {Error}", result.Errors.FirstOrDefault());
+                throw new InvalidOperationException($"Falha ao criar contrato: {result.Errors.FirstOrDefault()}");
+            }
         }
         catch (Exception ex)
         {

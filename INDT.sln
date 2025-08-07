@@ -11,11 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F6D5DEC-0C5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{2EE7D7FD-F6BA-4626-A8EB-F264E92DA27E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Applications", "src\Applications\Applications.csproj", "{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Applications", "src\Applications\Applications.csproj", "{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContratacaoService", "src\ContratacaoService\ContratacaoService.csproj", "{20AC735B-07EE-4A5E-81D0-7E8DDF768981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService", "src\ContratacaoService\ContratacaoService.csproj", "{20AC735B-07EE-4A5E-81D0-7E8DDF768981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContratacaoWorker", "src\ContratacaoWorker\ContratacaoWorker.csproj", "{BEC3C3FA-45E6-4CDA-B2BD-9FB1012A0A44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoWorker", "src\ContratacaoWorker\ContratacaoWorker.csproj", "{BEC3C3FA-45E6-4CDA-B2BD-9FB1012A0A44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AFE1960B-8AB3-40D4-946A-C11CBF61BE22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

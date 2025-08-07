@@ -3,10 +3,11 @@ using Core.PropostaAggregate;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Ardalis.Result;
 
 namespace Applications.UseCases.Contratacoes.Handlers;
 
-public class ListContratosQueryHandler : IRequestHandler<ListContratosQuery, IEnumerable<Contratacao>>
+public class ListContratosQueryHandler : IRequestHandler<ListContratosQuery, Result<IEnumerable<Contratacao>>>
 {
     private readonly PostgresDbContext _postgresDbContext;
 
@@ -15,14 +16,23 @@ public class ListContratosQueryHandler : IRequestHandler<ListContratosQuery, IEn
         _postgresDbContext = postgresDbContext;
     }
 
-    public async Task<IEnumerable<Contratacao>> Handle(ListContratosQuery request, CancellationToken cancellationToken)
+    public async Task<Result<IEnumerable<Contratacao>>> Handle(ListContratosQuery request, CancellationToken cancellationToken)
     {
-        var query = _postgresDbContext.Contratacao
-            .Include(c => c.PropostaSeguro)
-            .AsQueryable();
+        try
+        {
+            var query = _postgresDbContext.Contratacao
+                .Include(c => c.PropostaSeguro)
+                .AsQueryable();
 
-        query = query.OrderByDescending(c => c.CreatedAt);
+            query = query.OrderByDescending(c => c.CreatedAt);
 
-        return await query.ToListAsync(cancellationToken);
+            var contratos = await query.ToListAsync(cancellationToken);
+
+            return Result<IEnumerable<Contratacao>>.Success(contratos);
+        }
+        catch (Exception ex)
+        {
+            return Result<IEnumerable<Contratacao>>.Error($"Erro ao listar contratos: {ex.Message}");
+        }
     }
 } 
