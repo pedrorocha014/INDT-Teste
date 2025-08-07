@@ -26,7 +26,7 @@ public class ContratacaoControllerTests : IClassFixture<SharedTestFixture>, IDis
         var propostaId = 1;
 
         server.Given(WireMock.RequestBuilders.Request.Create()
-            .WithPath($"/api/proposta/{propostaId}")
+            .WithPath($"/api/propostas/{propostaId}")
             .UsingGet())
             .RespondWith(WireMock.ResponseBuilders.Response.Create()
                 .WithStatusCode(200)
@@ -46,7 +46,7 @@ public class ContratacaoControllerTests : IClassFixture<SharedTestFixture>, IDis
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         // Act
-        var response = await _fixture.HttpClient.PostAsync("/api/contratacao", content);
+        var response = await _fixture.HttpClient.PostAsync("/api/contratacoes", content);
 
         // Assert
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);

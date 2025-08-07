@@ -70,7 +70,7 @@ public class ContratarPropostaCommandHandler : IRequestHandler<ContratarProposta
     {
         try
         {
-            var url = $"{_serviceConfig.PropostaService.BaseUrl}/api/proposta/{propostaId}";
+            var url = $"{_serviceConfig.PropostaService.BaseUrl}/api/propostas/{propostaId}";
             
             var response = await _httpClient.GetAsync(url, cancellationToken);
 

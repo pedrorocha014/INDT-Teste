@@ -11,10 +11,10 @@ namespace PropostaService.Controllers;
 
 [ApiController]
 [Route("api/[Controller]")]
-public class PropostaController(IMediator mediator, ILogger<PropostaController> logger) : ControllerBase
+public class PropostasController(IMediator mediator, ILogger<PropostasController> logger) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
-    private readonly ILogger<PropostaController> _logger = logger;
+    private readonly ILogger<PropostasController> _logger = logger;
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreatePropostaRequest request)

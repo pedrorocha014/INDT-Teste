@@ -8,10 +8,10 @@ namespace ContratacaoService.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ContratacaoController(IMediator mediator, ILogger<ContratacaoController> logger) : ControllerBase
+public class ContratacoesController(IMediator mediator, ILogger<ContratacoesController> logger) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
-    private readonly ILogger<ContratacaoController> _logger = logger;
+    private readonly ILogger<ContratacoesController> _logger = logger;
 
     [HttpGet()]
     public async Task<IActionResult> List()

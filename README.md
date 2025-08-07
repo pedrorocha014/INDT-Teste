@@ -70,7 +70,7 @@ dotnet run --project src/PropostaService/PropostaService.csproj & dotnet run --p
 ### 1. Criar uma Proposta
 
 ```bash
-curl -X POST http://localhost:5276/api/proposta \
+curl -X POST http://localhost:5276/api/propostas \
   -H "Content-Type: application/json" \
   -d '{
     "name": "João Silva",
@@ -93,7 +93,7 @@ curl -X POST http://localhost:5276/api/proposta \
 ### 2. Alterar Status da Proposta para Aprovada
 
 ```bash
-curl -X PATCH http://localhost:5276/api/proposta/{id} \
+curl -X PATCH http://localhost:5276/api/propostas/{id} \
   -H "Content-Type: application/json" \
   -d '{
     "status": "Aprovada"
@@ -105,7 +105,7 @@ curl -X PATCH http://localhost:5276/api/proposta/{id} \
 ### 3. Contratar a Proposta Aprovada
 
 ```bash
-curl -X POST http://localhost:5203/api/contratacao \
+curl -X POST http://localhost:5203/api/contratacoes \
   -H "Content-Type: application/json" \
   -d '{
     "propostaId": id-da-proposta-aprovada
@@ -115,7 +115,7 @@ curl -X POST http://localhost:5203/api/contratacao \
 ### 4. Verificar Contrato Criado
 
 ```bash
-curl -X GET http://localhost:5203/api/contratacao
+curl -X GET http://localhost:5203/api/contratacoes
 ```
 
 **Resposta esperada:**

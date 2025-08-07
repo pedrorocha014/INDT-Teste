@@ -40,7 +40,7 @@ public class PropostaControllerTests : IClassFixture<SharedTestFixture>
         await _dbContext.SaveChangesAsync();
 
         // Act
-        var response = await _httpClient.GetAsync("/api/proposta");
+        var response = await _httpClient.GetAsync("/api/propostas");
         var propostas = await response.Content.ReadFromJsonAsync<List<PropostaResponse>>();
 
         // Assert
@@ -63,7 +63,7 @@ public class PropostaControllerTests : IClassFixture<SharedTestFixture>
         await _dbContext.SaveChangesAsync();
 
         // Act
-        var response = await _httpClient.GetAsync($"/api/proposta/{proposta.Id}");
+        var response = await _httpClient.GetAsync($"/api/propostas/{proposta.Id}");
         var propostaResponse = await response.Content.ReadFromJsonAsync<PropostaResponse>();
 
         // Assert
@@ -83,7 +83,7 @@ public class PropostaControllerTests : IClassFixture<SharedTestFixture>
         };
 
         // Act
-        var response = await _httpClient.PostAsJsonAsync($"/api/proposta", request);
+        var response = await _httpClient.PostAsJsonAsync($"/api/propostas", request);
 
         var propostaSalva = _dbContext.PropostasSeguro.First(p => p.Cpf == request.Cpf);
 
@@ -112,7 +112,7 @@ public class PropostaControllerTests : IClassFixture<SharedTestFixture>
         };
 
         // Act
-        var response = await _httpClient.PatchAsJsonAsync($"/api/proposta/{proposta.Id}", request);
+        var response = await _httpClient.PatchAsJsonAsync($"/api/propostas/{proposta.Id}", request);
 
         var propostaAtualizada = await _dbContext.PropostasSeguro
             .AsNoTracking()
