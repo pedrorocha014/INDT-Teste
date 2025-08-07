@@ -33,3 +33,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+namespace PropostaServiceWebApi
+{
+    public class Program;
+}

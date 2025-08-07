@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Projects\\INDT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|d:\\projects\\indt\\src\\applications\\usecases\\contratacoes\\handlers\\contratarpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|solutionrelative:src\\applications\\usecases\\contratacoes\\handlers\\contratarpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{589356D3-2463-442E-BB38-A545E635E33D}|tests\\PropostaIntegrationTests\\PropostaIntegrationTests.csproj|d:\\projects\\indt\\tests\\propostaintegrationtests\\endpoints\\propostacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{589356D3-2463-442E-BB38-A545E635E33D}|tests\\PropostaIntegrationTests\\PropostaIntegrationTests.csproj|solutionrelative:tests\\propostaintegrationtests\\endpoints\\propostacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20AC735B-07EE-4A5E-81D0-7E8DDF768981}|src\\ContratacaoService\\ContratacaoService.csproj|d:\\projects\\indt\\src\\contratacaoservice\\controllers\\contratacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20AC735B-07EE-4A5E-81D0-7E8DDF768981}|src\\ContratacaoService\\ContratacaoService.csproj|solutionrelative:src\\contratacaoservice\\controllers\\contratacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|d:\\projects\\indt\\src\\applications\\usecases\\propostas\\handlers\\updatepropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|solutionrelative:src\\applications\\usecases\\propostas\\handlers\\updatepropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ContratacaoController.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\ContratacaoService\\Controllers\\ContratacaoController.cs",
-              "RelativeDocumentMoniker": "src\\ContratacaoService\\Controllers\\ContratacaoController.cs",
-              "ToolTip": "D:\\Projects\\INDT\\src\\ContratacaoService\\Controllers\\ContratacaoController.cs",
-              "RelativeToolTip": "src\\ContratacaoService\\Controllers\\ContratacaoController.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAA8AAAAPAAAA",
+              "Title": "UpdatePropostaCommandHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
+              "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T13:20:55.413Z",
+              "WhenOpened": "2025-08-07T14:45:21.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PropostaController.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
+              "RelativeDocumentMoniker": "src\\PropostaService\\Controllers\\PropostaController.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
+              "RelativeToolTip": "src\\PropostaService\\Controllers\\PropostaController.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAawJQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T14:33:22.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ContratarPropostaCommandHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
-              "RelativeToolTip": "src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAawCkAAABuAAAA",
+              "Title": "PropostaControllerTests.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
+              "ToolTip": "D:\\Projects\\INDT\\tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
+              "RelativeToolTip": "tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAawF8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T12:48:59.299Z",
+              "WhenOpened": "2025-08-07T14:03:21.35Z",
               "EditorCaption": ""
             }
           ]
