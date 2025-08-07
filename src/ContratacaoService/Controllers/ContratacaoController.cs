@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using ContratacaoService.Dtos;
 using Applications.UseCases.Contratacoes.Commands;
-
+using Applications.UseCases.Contratacoes.Queries;
 namespace ContratacaoService.Controllers;
 
 [ApiController]
@@ -12,18 +12,39 @@ public class ContratacaoController(IMediator mediator, ILogger<ContratacaoContro
     private readonly IMediator _mediator = mediator;
     private readonly ILogger<ContratacaoController> _logger = logger;
 
-    [HttpGet]
-    public IActionResult Get()
+    [HttpGet()]
+    public async Task<IActionResult> List()
     {
         try
         {
-            _logger.LogInformation("ContratacaoService está funcionando!");
-            
-            return Ok(new { message = "ContratacaoService está online!", timestamp = DateTime.UtcNow });
+            _logger.LogInformation("Iniciando listagem de contratos");
+
+            var query = new ListContratosQuery();
+            var contratos = await _mediator.Send(query);
+
+            var response = contratos.Select(c => new ContratoResponse
+            {
+                Id = c.Id,
+                CreatedAt = c.CreatedAt,
+                PropostaId = c.PropostaId,
+                PropostaSeguro = c.PropostaSeguro != null ? new PropostaResponse
+                {
+                    Id = c.PropostaSeguro.Id,
+                    Name = c.PropostaSeguro.Name,
+                    Cpf = c.PropostaSeguro.Cpf,
+                    Status = c.PropostaSeguro.Status.ToString(),
+                    CreatedAt = c.PropostaSeguro.CreatedAt,
+                    UpdatedAt = c.PropostaSeguro.UpdatedAt
+                } : null
+            });
+
+            _logger.LogInformation("Listagem de contratos concluída. Total: {TotalContratos}", response.Count());
+
+            return Ok(response);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Erro no ContratacaoService");
+            _logger.LogError(ex, "Erro ao listar contratos");
             return StatusCode(500, "Erro interno do servidor");
         }
     }

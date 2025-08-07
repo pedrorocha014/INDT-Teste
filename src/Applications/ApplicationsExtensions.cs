@@ -1,6 +1,7 @@
 using System.Reflection;
 using Applications.Services;
 using Applications.UseCases.Contratacoes.Commands;
+using Applications.UseCases.Contratacoes.Queries;
 using Applications.UseCases.Propostas.Commands;
 using Applications.UseCases.Propostas.Queries;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,19 @@ public static class ApplicationsExtensions
 {
     public static IServiceCollection AddApplicationsServices(this IServiceCollection services)
     {
+        var mediatRAssemblies = new[]
+        {
+            Assembly.GetAssembly(typeof(CreatePropostaCommand)),
+            Assembly.GetAssembly(typeof(ListPropostasQuery)),
+            Assembly.GetAssembly(typeof(GetPropostaByIdQuery)),
+            Assembly.GetAssembly(typeof(UpdatePropostaCommand)),
+            Assembly.GetAssembly(typeof(ListContratosQuery)),
+            Assembly.GetAssembly(typeof(CreateContratoCommand)),
+            Assembly.GetAssembly(typeof(ContratarPropostaCommand))
+        };
+
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies));
+
         services.AddSingleton<IKafkaProducerService, KafkaProducerService>();
 
         return services;

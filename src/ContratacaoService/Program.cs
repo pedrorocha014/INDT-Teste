@@ -1,16 +1,7 @@
 using Infrastructure;
 using Applications;
-using Applications.UseCases.Contratacoes.Commands;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
-
-var mediatRAssemblies = new[]
-{
-    Assembly.GetAssembly(typeof(ContratarPropostaCommand)),
-};
-
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(mediatRAssemblies));
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationsServices();
