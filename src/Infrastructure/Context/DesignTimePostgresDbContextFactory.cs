@@ -12,9 +12,18 @@ public class DesignTimePostgresDbContextFactory : IDesignTimeDbContextFactory<Po
     public PostgresDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<PostgresDbContext>();
-        var connectionString = "Server=localhost;Port=5433;Database=indt_db;Username=postgres;Password=postgres";
+
+        // Captura o argumento --connection
+        var connectionStringIndex = Array.FindIndex(args, a => a == "--connection");
+        if (connectionStringIndex == -1 || connectionStringIndex + 1 >= args.Length)
+        {
+            throw new InvalidOperationException("Connection string not provided. Use --connection \"...\"");
+        }
+
+        var connectionString = args[connectionStringIndex + 1];
 
         optionsBuilder.UseNpgsql(connectionString);
+
         return new PostgresDbContext(optionsBuilder.Options);
     }
 }

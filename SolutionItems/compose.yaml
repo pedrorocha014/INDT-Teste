@@ -17,6 +17,26 @@ services:
       retries: 5
     networks:
       bubble:
+    profiles: ["essentials"]
+
+
+  postgres-test:
+    image: postgres:15
+    container_name: indt_test_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: indt_test_db
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      bubble:
+    profiles: ["testing"]
 
   zookeeper:
     image: docker.io/zookeeper:3.5
@@ -36,6 +56,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    profiles: ["essentials"]
   
   kafka:
     image: docker.io/confluentinc/cp-server:7.3.3
@@ -66,7 +87,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-  
+    profiles: ["essentials"]
+
   criador-topicos:
     image: docker.io/confluentinc/cp-kafka:7.3.2
     container_name: criador-topicos
@@ -89,7 +111,8 @@ services:
         kafka-topics --bootstrap-server kafka:29092 --list
     networks:
       bubble:
-  
+    profiles: ["essentials"]
+
   akhq:
     container_name: akhq
     image: docker.io/tchiotludo/akhq
@@ -107,7 +130,8 @@ services:
             docker-kafka-server:
               properties:
                 bootstrap.servers: "kafka:29092"
-
+    profiles: ["essentials"]  
+    
 networks:
   bubble:
     driver: bridge
