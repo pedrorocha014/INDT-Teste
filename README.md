@@ -24,6 +24,8 @@ O projeto é composto pelos seguintes componentes:
 - **Applications**: Camada de aplicação com usecases e handlers
 - **Core**: Camada de domínio com entidades e agregados
 
+ [Diagrama da arquitetura](https://github.com/pedrorocha014/INDT-Teste/blob/main/DIAGRAMA_ARQUITETURA.JPG)
+
 ## Como Executar
 
 ### Pré-requisitos
