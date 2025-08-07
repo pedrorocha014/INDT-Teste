@@ -5,7 +5,7 @@ using Infrastructure;
 
 var builder = Host.CreateApplicationBuilder(args);
 
-builder.Services.AddApplicationsServices();
+builder.Services.AddApplicationsServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 // Registrar HttpClient

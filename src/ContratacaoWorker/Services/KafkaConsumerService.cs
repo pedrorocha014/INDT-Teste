@@ -1,6 +1,4 @@
 using Confluent.Kafka;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Applications.Dtos;
 using Infrastructure.Configs;

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Applications.Services;
 using Applications.Dtos;
+using Applications.Configs;
 
 namespace Applications.UseCases.Contratacoes.Handlers;
 
@@ -14,15 +15,18 @@ public class ContratarPropostaCommandHandler : IRequestHandler<ContratarProposta
     private readonly ILogger<ContratarPropostaCommandHandler> _logger;
     private readonly HttpClient _httpClient;
     private readonly IKafkaProducerService _kafkaProducerService;
+    private readonly ServiceConfig _serviceConfig;
 
     public ContratarPropostaCommandHandler(
         ILogger<ContratarPropostaCommandHandler> logger,
         HttpClient httpClient,
-        IKafkaProducerService kafkaProducerService)
+        IKafkaProducerService kafkaProducerService,
+        ServiceConfig serviceConfig)
     {
         _logger = logger;
         _httpClient = httpClient;
         _kafkaProducerService = kafkaProducerService;
+        _serviceConfig = serviceConfig;
     }
 
     public async Task Handle(ContratarPropostaCommand request, CancellationToken cancellationToken)
@@ -56,7 +60,7 @@ public class ContratarPropostaCommandHandler : IRequestHandler<ContratarProposta
     {
         try
         {
-            var url = $"https://localhost:44311/api/proposta/{propostaId}";
+            var url = $"{_serviceConfig.PropostaService.BaseUrl}/api/proposta/{propostaId}";
             
             var response = await _httpClient.GetAsync(url, cancellationToken);
 

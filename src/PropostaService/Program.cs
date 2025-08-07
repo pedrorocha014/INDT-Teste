@@ -4,7 +4,7 @@ using Applications;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.Services.AddApplicationsServices();
+builder.Services.AddApplicationsServices(builder.Configuration);
 
 builder.Services.AddHttpClient();
 
@@ -15,7 +15,6 @@ builder.Services.Configure<RouteOptions>(options =>
     options.LowercaseUrls = true;
     options.LowercaseQueryStrings = true;
 });
-
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

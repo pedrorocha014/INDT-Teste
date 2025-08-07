@@ -108,7 +108,6 @@ services:
               properties:
                 bootstrap.servers: "kafka:29092"
 
-
 networks:
   bubble:
     driver: bridge
