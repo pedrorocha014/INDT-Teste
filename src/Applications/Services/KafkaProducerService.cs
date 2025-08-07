@@ -1,6 +1,7 @@
 using Confluent.Kafka;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Infrastructure.Configs;
 
 namespace Applications.Services;
 
@@ -9,14 +10,14 @@ public class KafkaProducerService : IKafkaProducerService
     private readonly IProducer<string, string> _producer;
     private readonly ILogger<KafkaProducerService> _logger;
 
-    public KafkaProducerService(ILogger<KafkaProducerService> logger)
+    public KafkaProducerService(ILogger<KafkaProducerService> logger, KafkaConfig kafkaConfig)
     {
         _logger = logger;
 
-        var config = new ProducerConfig
+        var config = new Confluent.Kafka.ProducerConfig
         {
-            BootstrapServers = "localhost:9092",
-            ClientId = "contratacao-service-producer"
+            BootstrapServers = kafkaConfig.BootstrapServers,
+            ClientId = kafkaConfig.Producer.ClientId
         };
 
         _producer = new ProducerBuilder<string, string>(config).Build();

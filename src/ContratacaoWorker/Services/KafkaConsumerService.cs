@@ -11,38 +11,41 @@ public class KafkaConsumerService : IKafkaConsumerService
     private readonly IProducer<string, string> _dlqProducer;
     private readonly ILogger<KafkaConsumerService> _logger;
     private readonly IServiceScopeFactory _serviceScopeFactory;
+    private readonly KafkaConfig _kafkaConfig;
 
     public KafkaConsumerService(
         ILogger<KafkaConsumerService> logger,
-        IServiceScopeFactory serviceScopeFactory)
+        IServiceScopeFactory serviceScopeFactory,
+        KafkaConfig kafkaConfig)
     {
         _logger = logger;
         _serviceScopeFactory = serviceScopeFactory;
 
-        var consumerConfig = new ConsumerConfig
+        var consumerConfig = new Confluent.Kafka.ConsumerConfig
         {
-            BootstrapServers = "localhost:9092",
-            GroupId = "contratacao-worker-group",
-            AutoOffsetReset = AutoOffsetReset.Earliest,
-            EnableAutoCommit = false
+            BootstrapServers = kafkaConfig.BootstrapServers,
+            GroupId = kafkaConfig.Consumer.GroupId,
+            AutoOffsetReset = Enum.Parse<Confluent.Kafka.AutoOffsetReset>(kafkaConfig.Consumer.AutoOffsetReset),
+            EnableAutoCommit = kafkaConfig.Consumer.EnableAutoCommit
         };
 
-        var producerConfig = new ProducerConfig
+        var producerConfig = new Confluent.Kafka.ProducerConfig
         {
-            BootstrapServers = "localhost:9092",
+            BootstrapServers = kafkaConfig.BootstrapServers,
             ClientId = "contratacao-worker-dlq-producer"
         };
 
         _consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();
         _dlqProducer = new ProducerBuilder<string, string>(producerConfig).Build();
+        _kafkaConfig = kafkaConfig;
     }
 
     public async Task StartConsumingAsync(CancellationToken cancellationToken)
     {
         try
         {
-            _consumer.Subscribe(TopicNames.PropostaContratada);
-            _logger.LogInformation("Iniciando consumo do tópico proposta-contratada");
+            _consumer.Subscribe(_kafkaConfig.Topics.PropostaContratada);
+            _logger.LogInformation("Iniciando consumo do tópico {Topico}", _kafkaConfig.Topics.PropostaContratada);
 
             while (!cancellationToken.IsCancellationRequested)
             {
@@ -152,7 +155,7 @@ public class KafkaConsumerService : IKafkaConsumerService
             var dlqJson = JsonConvert.SerializeObject(dlqMessage);
             var key = Guid.NewGuid().ToString();
 
-            var result = await _dlqProducer.ProduceAsync(TopicNames.PropostaContratadaDlq, new Message<string, string>
+            var result = await _dlqProducer.ProduceAsync(_kafkaConfig.Topics.PropostaContratadaDlq, new Message<string, string>
             {
                 Key = key,
                 Value = dlqJson
