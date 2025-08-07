@@ -32,3 +32,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+namespace ContratacaoServiceWebApi
+{
+    public class Program;
+}

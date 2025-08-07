@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Projects\\INDT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{589356D3-2463-442E-BB38-A545E635E33D}|tests\\PropostaIntegrationTests\\PropostaIntegrationTests.csproj|d:\\projects\\indt\\tests\\propostaintegrationtests\\endpoints\\propostacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{589356D3-2463-442E-BB38-A545E635E33D}|tests\\PropostaIntegrationTests\\PropostaIntegrationTests.csproj|solutionrelative:tests\\propostaintegrationtests\\endpoints\\propostacontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}|tests\\ContratacaoIntegrationTests\\ContratacaoIntegrationTests.csproj|d:\\projects\\indt\\tests\\contratacaointegrationtests\\endpoints\\contratacaocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}|tests\\ContratacaoIntegrationTests\\ContratacaoIntegrationTests.csproj|solutionrelative:tests\\contratacaointegrationtests\\endpoints\\contratacaocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|d:\\projects\\indt\\src\\applications\\usecases\\propostas\\handlers\\updatepropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|solutionrelative:src\\applications\\usecases\\propostas\\handlers\\updatepropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|d:\\projects\\indt\\src\\applications\\usecases\\contratacoes\\handlers\\contratarpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694CC7B5-E8E2-4B86-91DD-D0709BE4F603}|src\\Applications\\Applications.csproj|solutionrelative:src\\applications\\usecases\\contratacoes\\handlers\\contratarpropostacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|d:\\projects\\indt\\src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C4F954E-1384-4290-9B62-F63425BD5AF5}|src\\PropostaService\\PropostaService.csproj|solutionrelative:src\\propostaservice\\controllers\\propostacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}|tests\\ContratacaoIntegrationTests\\ContratacaoIntegrationTests.csproj|d:\\projects\\indt\\tests\\contratacaointegrationtests\\customwebapifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}|tests\\ContratacaoIntegrationTests\\ContratacaoIntegrationTests.csproj|solutionrelative:tests\\contratacaointegrationtests\\customwebapifactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AC735B-07EE-4A5E-81D0-7E8DDF768981}|src\\ContratacaoService\\ContratacaoService.csproj|d:\\projects\\indt\\src\\contratacaoservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20AC735B-07EE-4A5E-81D0-7E8DDF768981}|src\\ContratacaoService\\ContratacaoService.csproj|solutionrelative:src\\contratacaoservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdatePropostaCommandHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
-              "ToolTip": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
-              "RelativeToolTip": "src\\Applications\\UseCases\\Propostas\\Handlers\\UpdatePropostaCommandHandler.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Title": "ContratarPropostaCommandHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
+              "ToolTip": "D:\\Projects\\INDT\\src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
+              "RelativeToolTip": "src\\Applications\\UseCases\\Contratacoes\\Handlers\\ContratarPropostaCommandHandler.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAawEIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:45:21.33Z",
+              "WhenOpened": "2025-08-07T16:45:34.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\INDT\\src\\ContratacaoService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\ContratacaoService\\appsettings.json",
+              "ToolTip": "D:\\Projects\\INDT\\src\\ContratacaoService\\appsettings.json",
+              "RelativeToolTip": "src\\ContratacaoService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-07T16:43:36.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PropostaController.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
-              "RelativeDocumentMoniker": "src\\PropostaService\\Controllers\\PropostaController.cs",
-              "ToolTip": "D:\\Projects\\INDT\\src\\PropostaService\\Controllers\\PropostaController.cs",
-              "RelativeToolTip": "src\\PropostaService\\Controllers\\PropostaController.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAawJQAAAAEAAAA",
+              "Title": "CustomWebApiFactory.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\tests\\ContratacaoIntegrationTests\\CustomWebApiFactory.cs",
+              "RelativeDocumentMoniker": "tests\\ContratacaoIntegrationTests\\CustomWebApiFactory.cs",
+              "ToolTip": "D:\\Projects\\INDT\\tests\\ContratacaoIntegrationTests\\CustomWebApiFactory.cs",
+              "RelativeToolTip": "tests\\ContratacaoIntegrationTests\\CustomWebApiFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:33:22.904Z",
+              "WhenOpened": "2025-08-07T16:43:26.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PropostaControllerTests.cs",
-              "DocumentMoniker": "D:\\Projects\\INDT\\tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
-              "RelativeDocumentMoniker": "tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
-              "ToolTip": "D:\\Projects\\INDT\\tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
-              "RelativeToolTip": "tests\\PropostaIntegrationTests\\Endpoints\\PropostaControllerTests.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAawF8AAAAJAAAA",
+              "Title": "ContratacaoControllerTests.cs",
+              "DocumentMoniker": "D:\\Projects\\INDT\\tests\\ContratacaoIntegrationTests\\Endpoints\\ContratacaoControllerTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContratacaoIntegrationTests\\Endpoints\\ContratacaoControllerTests.cs",
+              "ToolTip": "D:\\Projects\\INDT\\tests\\ContratacaoIntegrationTests\\Endpoints\\ContratacaoControllerTests.cs",
+              "RelativeToolTip": "tests\\ContratacaoIntegrationTests\\Endpoints\\ContratacaoControllerTests.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAawCwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:03:21.35Z",
+              "WhenOpened": "2025-08-07T16:36:40.364Z",
               "EditorCaption": ""
             }
           ]

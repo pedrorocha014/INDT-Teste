@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoWorker", "src\Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AFE1960B-8AB3-40D4-946A-C11CBF61BE22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropostaIntegrationTests", "tests\PropostaIntegrationTests\PropostaIntegrationTests.csproj", "{589356D3-2463-442E-BB38-A545E635E33D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaIntegrationTests", "tests\PropostaIntegrationTests\PropostaIntegrationTests.csproj", "{589356D3-2463-442E-BB38-A545E635E33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContratacaoIntegrationTests", "tests\ContratacaoIntegrationTests\ContratacaoIntegrationTests.csproj", "{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{589356D3-2463-442E-BB38-A545E635E33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{589356D3-2463-442E-BB38-A545E635E33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{589356D3-2463-442E-BB38-A545E635E33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{20AC735B-07EE-4A5E-81D0-7E8DDF768981} = {6F6D5DEC-0C5F-4362-A0EB-1EC0DEEE04C9}
 		{BEC3C3FA-45E6-4CDA-B2BD-9FB1012A0A44} = {6F6D5DEC-0C5F-4362-A0EB-1EC0DEEE04C9}
 		{589356D3-2463-442E-BB38-A545E635E33D} = {AFE1960B-8AB3-40D4-946A-C11CBF61BE22}
+		{3F3AEB22-5DBB-42A2-A6F9-85C0ED9739B7} = {AFE1960B-8AB3-40D4-946A-C11CBF61BE22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6AD6039-FCB4-4D97-BEEE-610172814062}
